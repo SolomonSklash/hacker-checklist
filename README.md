@@ -1,1 +1,1 @@
-# The Hacker Checlist
+# The Hacker Checklist
