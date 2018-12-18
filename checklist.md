@@ -1,7 +1,5 @@
 # Pentest Workflow Template
 
-[TOC]
-
 ## Workflow
 
 #### Pre-Login
