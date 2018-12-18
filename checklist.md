@@ -58,7 +58,7 @@
 
 ##### Pre-auth Misc
 - [ ] Find non-existent page/404 to check for custom error page
-- [ ] Wappalyzer
+- [ ] [Wappalyzer](https://www.wappalyzer.com)
 
 #### Login
 - [ ] Autocomplete="off"
@@ -110,7 +110,7 @@
     - [ ] `gobuster -u $URL -w /usr/share/seclists/Discovery/Web-Content/big.txt -s '200,204,301,302,307,401,403,500' -e -c 'COOKIES=cookies'`
 - [ ] Check for 200 vs. 302 response on login
     - [ ] Check `about:cache` for cached data
-- [ ] Wappalyzer again
+- [ ] [Wappalyzer](https://www.wappalyzer.com) again
 
 ##### Post-auth headers
 - [ ] Check 404 page for headers, esp. CSP
