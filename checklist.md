@@ -54,7 +54,7 @@
 - [ ] Secure
 - [ ] HttpOnly
 - [ ] Note session cookies for possible session fixation post-auth
-- [ ] Check for liberal cookie domain scope (WAHH p.244, 246)
+- [ ] Check for liberal cookie domain scope ([WAHH](http://mdsec.net/wahh] p.244, 246)
 
 ##### Pre-auth Misc
 - [ ] Find non-existent page/404 to check for custom error page
@@ -64,7 +64,7 @@
 - [ ] Autocomplete="off"
 - [ ] Burp compare login failures with good vs. bad usernames
 - [ ] Username/password harvesting
-	- If accounts are locked out, a message stating the lockout has occured is a way to enumerate usernames (WAHH p.197)
+	- If accounts are locked out, a message stating the lockout has occured is a way to enumerate usernames ([WAHH](http://mdsec.net/wahh] p.197)
 - [ ] Displayed passwords
 	- Assumes passwords not hashed
 - [ ] Parameters are passed in URL string
@@ -75,7 +75,7 @@
 - [ ] Secret question bypass
 - [ ] Weak/short secret questions
 - [ ] Check for non-hashed secret questions
-- [ ] Test 2FA bypass (WAHH p.186)
+- [ ] Test 2FA bypass ([WAHH](http://mdsec.net/wahh] p.186)
 - [ ] Look at "remember me" functionality
 	- [ ] Predictable tokens to bypass 2FA
     - [ ] Replay other user's tokens to bypass 2FA
@@ -83,7 +83,7 @@
     - [ ] Check for weak obfuscation/encoding/encryption of token/cookie
     - [ ] Remember multiple users and compare tokens
     - [ ] Determine if entire token is used or only parts
-    	- Modify token to find parts that are used, e.g. Burp Intruder char frobber (WAHH p.212)
+    	- Modify token to find parts that are used, e.g. Burp Intruder char frobber ([WAHH](http://mdsec.net/wahh] p.212)
 - [ ] Login multiple times and verify session token changes each time
 - [ ] Check for SSO
 	- [ ] Use EsPReSSO and/or SAML Raider extensions
@@ -92,10 +92,10 @@
 - [ ] Check for bad password lockout
 - [ ] Check for bad secret question lockout
 - [ ] Compare good password response on locked out account with bad password response
-- [ ] Fuzz login parameters (WAHH p.168)
+- [ ] Fuzz login parameters ([WAHH](http://mdsec.net/wahh] p.168)
     - [Arjun parameter fuzzer](https://github.com/s0md3v/Arjun)  
-- [ ] Check that the same secret question is used for each authentication attempt to prevent attackers from "picking" a secret question to answer (WAHH p.195)
-- [ ] Check that app is storing which secret question being asked on the server and not on the client (WAHH p.195)
+- [ ] Check that the same secret question is used for each authentication attempt to prevent attackers from "picking" a secret question to answer ([WAHH](http://mdsec.net/wahh] p.195)
+- [ ] Check that app is storing which secret question being asked on the server and not on the client ([WAHH](http://mdsec.net/wahh] p.195)
 
 #### Post-Login
 
@@ -127,7 +127,7 @@
 - [ ] System infoformation disclosed
 
 ##### Post-auth cookies
-- [ ] Session fixation in session cookies (WAHH p.244)
+- [ ] Session fixation in session cookies ([WAHH](http://mdsec.net/wahh] p.244)
 - [ ] Check if pre- and post-auth cookies are the same
 - [ ] See if bogus but validly formed token is accepted
 - [ ] Secure parameter
@@ -137,7 +137,7 @@
 ##### Post-auth Misc
 - [ ] Check for last login notification
 - [ ] Check for logout button
-- [ ] Verify logout actually ends session by resending old tokens (WAHH p.242)
+- [ ] Verify logout actually ends session by resending old tokens ([WAHH](http://mdsec.net/wahh] p.242)
 	- [ ] Verify cookie is not simply being unset on the client side
 
 #### Navigation
@@ -151,15 +151,15 @@
 ##### Process site mapping results
 - [ ] Run Burp -> site root -> enagagement tools -> analyze site
 - [ ] Determine the site navigation type: application pages or functional paths
-	- [ ] If functional paths, create path map (WAHH p.95)
+	- [ ] If functional paths, create path map ([WAHH](http://mdsec.net/wahh] p.95)
     - [ ] Create functional diagram of application logic. Look for good ways to map this, e.g. OneNote, draw.io, etc.
-- [ ] Find hidden debug parameter names with Intruder Cluster Bomb (WAHH p.97)
+- [ ] Find hidden debug parameter names with Intruder Cluster Bomb ([WAHH](http://mdsec.net/wahh] p.97)
 	- [ ] debug, test, source, hide
     - [ ] true, yes, on, 1
 - [ ] Identify REST-style URLS
 - [ ] Identify query string parameters
     - - [Arjun parameter fuzzer](https://github.com/s0md3v/Arjun)   
-- [ ] Identify non-standard query string parameter formats (WAHH p.99)
+- [ ] Identify non-standard query string parameter formats ([WAHH](http://mdsec.net/wahh] p.99)
 - [ ] Run Param Miner extension
 - [ ] Run Web Cache Deception Scanner extension
 - [ ] Recursively gobuster newly-found directories
@@ -182,8 +182,8 @@
 - [ ] Check if existing password is verified before new password, enabling password guessing attacks
 - [ ] Check for brute force possibility
 - [ ] Try all combinations of good/bad/mismatched passwords
-- [ ] Check if a username is provided (should never be), and if other usernames can be used/bruteforced (WAHH p.199)
-- [ ] Check for multistage password change functionality (WAHH p.262)
+- [ ] Check if a username is provided (should never be), and if other usernames can be used/bruteforced ([WAHH](http://mdsec.net/wahh] p.199)
+- [ ] Check for multistage password change functionality ([WAHH](http://mdsec.net/wahh] p.262)
 	- [ ] See if token/creds are checked at first stage, but not at later stage of process
 
 ##### Forgot password functionality
@@ -205,17 +205,17 @@
 		- [ ] If sleep RCE found, tweak timeout settings
 
 ##### Post-navigation Misc
-- [ ] Compare site maps with low-priv user (WAHH p.268)
+- [ ] Compare site maps with low-priv user ([WAHH](http://mdsec.net/wahh] p.268)
 - [ ] Check that password change functionality exists
 - [ ] Check for comments
 - [ ] Run Paramalyzer extension
-- [ ] Identify impersonation functionality (WAHH p.179)
+- [ ] Identify impersonation functionality ([WAHH](http://mdsec.net/wahh] p.179)
 	- [ ] Check if admins can be impersonated
 - [ ] Check for account registration
 - [ ] Check for account creation, e.g. as admin
-	- [ ] Check for predictable usernames (WAHH p.182)
-	- [ ] Check for predictable initial passwords (WAHH p.183)
-- [ ] Spoof UA with browser extension and Burp (WAHH p.100)
+	- [ ] Check for predictable usernames ([WAHH](http://mdsec.net/wahh] p.182)
+	- [ ] Check for predictable initial passwords ([WAHH](http://mdsec.net/wahh] p.183)
+- [ ] Spoof UA with browser extension and Burp ([WAHH](http://mdsec.net/wahh] p.100)
 - [ ] Unsafe configuration
 - [ ] Create malformed requests to generate 4xx and 5xx errors
 - [ ] Unauthenticated help pages
@@ -226,7 +226,7 @@
 - [ ] Cross-site tracing (XST)
 	- [ ] Send OPTIONS request
 - [ ] Sensitive info in GET parameters
-- [ ] Verify that client-side controls are replicated server side (WAHH p.117)
+- [ ] Verify that client-side controls are replicated server side ([WAHH](http://mdsec.net/wahh] p.117)
 - [ ] Check for disabled elements and submit them as parameters
 - [ ] Check for missing SRI attributes
 - [ ] Look for hidden params with Param Miner extension
@@ -253,11 +253,11 @@
     - `{ { constructor.constructor(“alert(1)”)() } }
 
 ##### Session issues
-- [ ] Determine the sesion token (WAHH p.208)
+- [ ] Determine the sesion token ([WAHH](http://mdsec.net/wahh] p.208)
 	- [ ] Remove possible tokens on session dependent page until actual session is found.
 - [ ] Test if token is encoded
 	- [ ] Determine if entire token is used or only parts
-    - [ ] Modify token to find parts that are used, e.g. Burp Intruder char frobber (WAHH p.212)
+    - [ ] Modify token to find parts that are used, e.g. Burp Intruder char frobber ([WAHH](http://mdsec.net/wahh] p.212)
 - [ ] Session ID exposed in URL
 - [ ] Session ID not invalidated after logout/timeout
 	- [ ] Replay authenticated action after logout
@@ -267,7 +267,7 @@
 - [ ] Concurrent sessions
 - [ ] Check if session token in each browser is the same or different.
 - [ ] Improper session time out configuration
-- [ ] Check if any session tokens/other data is encrypted (WAHH p.232)
+- [ ] Check if any session tokens/other data is encrypted ([WAHH](http://mdsec.net/wahh] p.232)
 	- [ ] Bitflipping attacks, ECB
 - [ ] Test sessions with Autorize extension
 
@@ -319,7 +319,7 @@
 ##### ASP.net issues
 - [ ] Debugging enabled
 - [ ] Unencrypted ViewState
-- [ ] ViewState without MAC enabled (Burp checks for this, WAHH p.127)
+- [ ] ViewState without MAC enabled (Burp checks for this, [WAHH](http://mdsec.net/wahh] p.127)
 
 #### Misc. issues
 
