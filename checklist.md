@@ -123,7 +123,7 @@
 - [ ] Cache-Control
 - [ ] CORS headers
 	- [ ] Add evil.com Origin header
-	- [ ] https://www.trustedsec.com/2018/04/cors-findings/response
+	- [Comprehending CORS Findings](https://www.trustedsec.com/2018/04/cors-findings/) 
 - [ ] System info disclosed
 
 ##### Post-auth cookies
