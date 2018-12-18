@@ -132,7 +132,7 @@
 - [ ] See if bogus but validly formed token is accepted
 - [ ] Secure parameter
 - [ ] HttpOnly parameter
-- [ ] Samesite parameter????
+- [ ] Samesite parameter
 
 ##### Post-auth Misc
 - [ ] Check for last login notification
