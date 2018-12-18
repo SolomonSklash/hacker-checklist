@@ -124,7 +124,7 @@
 - [ ] CORS headers
 	- [ ] Add evil.com Origin header
 	- [Comprehending CORS Findings](https://www.trustedsec.com/2018/04/cors-findings/) 
-- [ ] System info disclosed
+- [ ] System infoformation disclosed
 
 ##### Post-auth cookies
 - [ ] Session fixation in session cookies (WAHH p.244)
