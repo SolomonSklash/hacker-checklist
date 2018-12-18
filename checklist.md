@@ -54,7 +54,7 @@
 - [ ] Secure
 - [ ] HttpOnly
 - [ ] Note session cookies for possible session fixation post-auth
-- [ ] Check for liberal cookie domain scope (WAHH p.244,246)
+- [ ] Check for liberal cookie domain scope (WAHH p.244, 246)
 
 ##### Pre-auth Misc
 - [ ] Find non-existent page/404 to check for custom error page
