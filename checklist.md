@@ -239,7 +239,7 @@
 - [ ] XPath Injection
 - [ ] Server side request forgery
 - [ ] LDAP injection
-- [ ] XML injection (see MMWPT p.179)
+- [ ] XML injection (see [MMWPT](https://www.packtpub.com/networking-and-servers/mastering-modern-web-penetration-testing) p.179)
 	- [ ] look for `application/json` Content-Type header and change to `application/xml`
 - [ ] Blind XML external entity processing
 	- look for `application/json` Content-Type header and change to `application/xml`
@@ -293,7 +293,7 @@
 - [ ] Test tokens between different users
 - [ ] Test tokens between sessions
 - [ ] Check for POST/GET method interchange
-- [ ] Verify CSRF token is checked server-side (MMWPT p.93):
+- [ ] Verify CSRF token is checked server-side ([MMWPT](https://www.packtpub.com/networking-and-servers/mastering-modern-web-penetration-testing) p.93):
 	- [ ] If currently logged in as user A then use the CSRF token of any other user B and check if the request of A is allowed via B's token. Then use this logic to bypass the CSRF protection.
 	- [ ] Don't delete the anti-CSRF token parameter but put a blank inside its value and see if it works.
 	- [ ] Put a random string with a similar length to that of the anti-CSRF token. Check to see if that works.
