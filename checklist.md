@@ -5,15 +5,15 @@
 #### Pre-Login
 
 ##### Server scans
-- [ ] nmap
+- [ ] [nmap](https://nmap.org/)
     - `sudo nmap -v -Pn -sV --reason --version-all --top-ports 1000 $URL`
     - `sudo nmap -v -Pn -p xx,xx,xx http-apache-negotiation,http-apache-server-status,http-aspnet-debug,http-auth,http-auth-finder,http-config-backup,http-cors,http-cross-domain-policy,http-default-accounts,http-enum,http-errors,http-generator,http-iis-short-name-brute,http-iis-webdav-vuln,http-internal-ip-disclosure,http-jsonp-detection,http-mcmp,http-method-tamper,http-methods,http-ntlm-info,http-open-proxy,http-open-redirect,http-passwd,http-php-version,http-phpself-xss,http-trace,http-traceroute,http-vuln-cve2012-1823,http-vuln-cve2015-1635,http-vuln-cve2017-5638 $URL`
-- [ ] nikto
+- [ ] [nikto](https://github.com/sullo/nikto)
 	- `nikto -h $URL [-ssl] -maxtime 15m -Display 1234`
     - `nikto -config $CONFIGFILE`
-- [ ] whatweb
+- [ ] [whatweb](https://tools.kali.org/web-applications/whatweb)
 	- `whatweb $URL --aggression=3 --cookie 'name=value' --verbose`
-- [ ] gobuster
+- [ ] [gobuster](https://github.com/OJ/gobuster)
 	- `gobuster -u $URL -w /usr/share/seclists/Discovery/Web-Content/big.txt -s '200,204,301,302,307,403,500' -e`
 - [ ] [photon](https://github.com/s0md3v/Photon/wiki)
 	- `python photon.py -u $URL --verbose --threads X --level X --cookies 'COOKIE=asd123'`
@@ -25,7 +25,7 @@
 	- `python cangibrina.py -u $URL -v --nmap`
 - [ ] [snallygaster](https://github.com/hannob/snallygaster)
 	- `snallygaster -d $URL`
-- TODO: wfuzz?
+- TODO: wfuzz
 
 ##### SSL/TLS checks
 - [ ] Lacking TLS altogether
